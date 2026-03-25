@@ -1,0 +1,57 @@
+
+<!-- Name: Haiden Clark-McLean-Davis
+Student Number: 400650209
+Course: COMPSCI 1XD3
+Lab: Lab 7.2
+File: index.html
+Date: March 24, 2026
+Due: March 16, 2026 (8 late days used)
+Description: HTML structure for the Merge Me game. -->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merge Me!</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 id="splashTitle" class="">Merge Me!</h1>
+    <h1 id="gameTitle" class="hidden">Merge Me!</h1>
+    <div class="data">
+        <div>Score: <span id="score">0</span></div>
+        <div>Merges: <span id="merges">0</span></div>
+        <div>Highscore: <span id="highscore">0</span></div>
+        <div>Time: <span id="time">0</span></div>
+    </div>
+    <section id="splashScreen" class="">
+        <canvas id="splashCanvas" width="320" height="180"></canvas>
+        <button id="startButton">Start Game</button>
+        <button id="helpButton">Help</button>
+
+        <div id="helpText" class="helpText hidden">
+            Drag one colour onto the same colour to merge it.
+            If you drag onto a different colour, they swap places.
+            The game ends when the board fills up.
+        </div>
+    </section>
+    <section id="gameScreen" class="hidden">
+        <canvas id="game" class="canvas"></canvas>
+    </section>
+
+    <section id="resultScreen" class="hidden">
+            <h1 id="gameOverText">Game Over!!</h1>
+            <button id="reStartButton">Play Again</button>
+            <button id="mainMenuButton">Main Menu</button>
+    </section>
+
+    <script src="js/app.js"></script>
+
+    </main>
+</body>
+
+</html>

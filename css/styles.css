@@ -1,0 +1,153 @@
+/*
+Name: Haiden Clark-McLean-Davis
+Student Number: 400650209
+Course: COMPSCI 1XD3
+Lab: Lab 7.2
+File: styles.css
+Date: March 24, 2026
+Due: March 16, 2026 (8 late days used)
+Description: CSS styles for the Merge Me game.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #45afff;
+    padding: 20px 10px 30px;
+}
+
+.hidden {
+    display: none;
+}
+#gameOverText {
+    color: green;
+    margin-top: 10px;
+}
+.helpText {
+    border: 3px solid black;
+    background: #eef6fb;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: left;
+}
+#splashScreen,
+#gameScreen,
+#resultScreen {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background: white;
+    border: 3px solid black;
+    border-radius: 18px;
+    padding: 18px 14px 20px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+#splashTitle {
+    text-align: center;
+    margin-bottom: 14px;
+    font-size: 34px;
+    color: #2c4a7a;
+    margin-top: 300px;
+}
+
+#splashScreen h1,
+#gameScreen h1,
+#resultScreen h1 {
+    text-align: center;
+    margin-bottom: 14px;
+    font-size: 34px;
+    color: #2c4a7a;
+}
+
+#splashScreen {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+#splashScreen.fadeOut {
+    opacity: 0;
+}
+
+button {
+    border: 3px solid black;
+    background: #c3ffb8;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 4px;
+    
+}
+
+button:hover {
+    background: #079802;
+    box-shadow: 0 8px 0 #9eb2c0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #2c4a7a;
+}
+.data {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.data div {
+    border: 3px solid black;
+    background: #f4f9ff;
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 0 #303030;
+}
+
+.canvas {
+    display: block;
+    border: 5px solid black;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 8px 0 #9eb2c0;
+}
+
+#gameScreen {
+    padding-right: 625px;
+} 
+@media (max-width: 480px) {
+    #splashScreen,
+    #gameScreen,
+    #resultScreen {
+        padding: 14px 10px 16px;
+    }
+
+    #splashScreen h1,
+    #gameScreen h1,
+    #resultScreen h1 {
+        font-size: 28px;
+    }
+
+    .data div {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 9px 12px;
+    }
+}
